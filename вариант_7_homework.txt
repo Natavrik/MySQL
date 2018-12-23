@@ -44,7 +44,7 @@ CREATE TABLE `Запчасти заказов 1`
 `Количество` INT NOT NULL, 
 CONSTRAINT `№заказа_артикул 1`PRIMARY KEY (`№ заказа`,`Артикул`),
 foreign key (`№ заказа`) references `Запчасти заказов` (`№ заказа`) on update cascade on delete restrict,
-foreign key (`Артикул`) references `Запчасти заказов` (`Артикул`) on update cascade on delete restrict
+foreign key (`Артикул`) references `Запчасти` (`Артикул`) on update cascade on delete restrict
 );
 
 
@@ -67,4 +67,3 @@ INSERT INTO `Запчасти заказов` VALUES
 INSERT INTO `Запчасти заказов 1`VALUES 
 (1010,'21140-8403010-01', 1), 
 (1010,'21140-3711010-00', 1);
-
