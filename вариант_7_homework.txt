@@ -10,8 +10,8 @@ USE homework_07;
 CREATE TABLE `Запчасти`
 ( 
 `Артикул` VARCHAR (20) NOT NULL PRIMARY KEY, 
-`Наименование запчасти` VARCHAR (20) NOT NULL, 
-`Производитель` VARCHAR (20) NOT NULL, 
+`Наименование запчасти` VARCHAR (30) NOT NULL, 
+`Производитель` VARCHAR (30) NOT NULL, 
 `Стоимость` INT NOT NULL 
 ); 
 
@@ -20,8 +20,8 @@ CREATE TABLE `Заказы`
 ( 
 `№ заказа` INT NOT NULL PRIMARY KEY, 
 `Адрес доставки` VARCHAR (60) NOT NULL, 
-`ФИО клиента` VARCHAR (20) NOT NULL, 
-`Состояние заказа` VARCHAR (15)
+`ФИО клиента` VARCHAR (30) NOT NULL, 
+`Состояние заказа` VARCHAR (30)
 /* CHECK (`Состояние заказа` IN (" В работе ", " Выполнен"))*/
 ); 
 
