@@ -31,7 +31,7 @@ CREATE TABLE `Запчасти заказов`
 `№ заказа` INT NOT NULL, 
 `Артикул` VARCHAR (60) NOT NULL, 
 `Количество` INT NOT NULL, 
-CONSTRAINT `№заказа_артикул`PRIMARY KEY (`№ заказа`,`Артикул`) 
+CONSTRAINT `№заказа_артикул`PRIMARY KEY (`№ заказа`,`Артикул`), 
 foreign key (`№ заказа`) references `Заказы` (`№ заказа`) on update cascade on delete restrict,
 foreign key (`Артикул`) references `Запчасти` (`Артикул`) on update cascade on delete restrict 
 );
@@ -42,7 +42,7 @@ CREATE TABLE `Запчасти заказов 1`
 `№ заказа` INT NOT NULL, 
 `Артикул` VARCHAR (60) NOT NULL, 
 `Количество` INT NOT NULL, 
-CONSTRAINT `№заказа_артикул 1`PRIMARY KEY (`№ заказа`,`Артикул`) 
+CONSTRAINT `№заказа_артикул 1`PRIMARY KEY (`№ заказа`,`Артикул`),
 foreign key (`№ заказа`) references `Запчасти заказов` (`№ заказа`) on update cascade on delete restrict,
 foreign key (`Артикул`) references `Запчасти заказов` (`Артикул`) on update cascade on delete restrict
 );
